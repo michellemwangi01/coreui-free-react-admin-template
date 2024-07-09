@@ -15,6 +15,7 @@ import { AppSidebarNav } from './AppSidebarNav'
 
 import { logo } from 'src/assets/brand/logo'
 import { sygnet } from 'src/assets/brand/sygnet'
+import HIXGateLogo from 'src/assets/images/HIXGateLogo.jpeg'
 
 // sidebar nav config
 import navigation from '../_nav'
@@ -27,7 +28,7 @@ const AppSidebar = () => {
   return (
     <CSidebar
       className="border-end"
-      colorScheme="dark"
+      colorScheme="light"
       position="fixed"
       unfoldable={unfoldable}
       visible={sidebarShow}
@@ -37,8 +38,9 @@ const AppSidebar = () => {
     >
       <CSidebarHeader className="border-bottom">
         <CSidebarBrand to="/">
-          <CIcon customClassName="sidebar-brand-full" icon={logo} height={32} />
-          <CIcon customClassName="sidebar-brand-narrow" icon={sygnet} height={32} />
+          <div>
+            <img src={HIXGateLogo} alt="HIX Gate Logo" />
+          </div>
         </CSidebarBrand>
         <CCloseButton
           className="d-lg-none"

@@ -1,0 +1,22 @@
+/* Add this to your styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@keyframes kenBurnsZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05); /* Adjust the scale value for more/less zoom */
+  }
+}
+
+.parallax {
+  height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1494621930069-4fd4b2e24a11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: kenBurnsZoom 5s alternate; /* 20s duration, infinite loop, alternate direction */
+  /* animation: kenBurnsZoom 20s infinite alternate; 20s duration, infinite loop, alternate direction */
+}
